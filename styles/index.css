@@ -1,0 +1,119 @@
+@import url('search.css');
+@import url('current.css');
+@import url('location.css');
+@import url('forecast.css');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    color: rgba(255,255,255,0.7);
+    font-family: Raleway;
+}
+
+.backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 2.5s ease-in-out;
+    background-image: url('../assets/images/sunny.jpg');
+}
+
+.bgVisible {
+    opacity: 1;
+}
+
+.bgHidden {
+    opacity: 0;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+
+.modalContainer {
+    width: 1024px;
+    height: 600px;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    padding: 16px;
+}
+
+.modal {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 85px 85px 1fr;
+    grid-template-areas: 
+        'search current'
+        'location current'
+        'forecast forecast';
+    height: 100%;
+    align-items: stretch;
+    justify-items: stretch;
+}
+
+#spinner {
+    width: 128px;
+    height: 128px;
+    border-radius: 1000px;
+    display: inline-block;
+    border: 4px solid rgba(255,255,255,0.7);
+    border-top: 4px solid rgba(0,0,0,0.4);
+    animation: spin 1s infinite linear;
+}
+
+#error {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* fancy scrollbar */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0.4);
+    border: 4px solid transparent;
+    background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.7);
+    border-radius: 6px;
+    border: 4px solid transparent;
+    background-clip: padding-box;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

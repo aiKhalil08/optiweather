@@ -1,0 +1,20 @@
+#currentSection {
+    grid-area: current;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#currentSection img {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+#currentSection #currentDescription {
+    font-size: 14px;
+    font-weight: 600;
+}
+#currentSection #currentDegree {
+    font-size: 48px;
+    font-weight: 600;
+}

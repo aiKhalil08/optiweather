@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="backgroundImg bgVisible"></div>
+    <div class="backgroundImg bgHidden"></div>
+    <main>
+        <div class="modalContainer">
+            <div class="modal">
+                <form id="searchSection">
+                    <div id="searchBar">
+                        <img src="assets/svgs/search-icon.svg" alt="">
+                        <input type="text" name="cityName" id="searchField" placeholder="Search by city name">
+                        <button id="searchButton">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(0,0,0,0.7)" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                              </svg>
+                        </button>
+                    </div>
+                </form>
+                <div id="currentSection">
+                </div>
+                <div id="locationSection">
+                </div>
+                <div id="forecastSection">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+                        <p style="font-size: 36px; font-weight: 600;">Welcome to Group 1 Weather App</p>
+                        <p>Powered by: <a href="https://www.weatherapi.com/" style="color: rgba(255,255,255,.7)">WeatherAPI.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>

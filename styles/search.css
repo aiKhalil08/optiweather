@@ -1,0 +1,49 @@
+#searchSection {
+    grid-area: search;
+    display: grid;
+    align-items: start;
+    justify-items: start;
+}
+#searchSection #searchBar {
+    position: relative;
+    width: 100%;
+}
+#searchSection #searchBar img, #searchSection button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#searchSection #searchBar img {
+    left: 16px;
+    width: 18px;
+}
+
+#searchSection #searchButton {
+    right: 10px;
+    background-color: #ffffff70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 36px;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+}
+#searchSection input {
+    background-color: rgba(0,0,0,0.4);
+    padding: 16px;
+    padding-left: 44px;
+    padding-right: 82px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+    border-radius: 32px;
+    font-size: 18px;
+}
+
+#searchSection input::placeholder {
+    color: white;
+    opacity: .5;
+}

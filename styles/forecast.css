@@ -1,0 +1,78 @@
+#forecastSection {
+    grid-area: forecast;
+    padding-top: 16px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+#forecast {
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#forecastSection ul {
+    margin-top: 16px;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+#forecastSection #dailyForecastContainer {
+    flex: 1;
+}
+
+#forecastSection #hourlyForecastContainer {
+    flex: 1.3;
+    height: 100%;
+    overflow: auto;
+}
+
+#forecastSection #hourlyForecastContainer ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#forecastSection .dailyForecastCard, #forecastSection .hourlyForecastCard {
+    border-radius: 16px;
+    border: 2px solid #ffffff70;
+    display: flex;
+}
+
+#forecastSection .dailyForecastCard {
+    flex: 1;
+    padding: 16px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#forecastSection .dailyForecastCard .day {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#forecastSection .dailyForecast .dayTemp {
+    font-weight: 600;
+}
+
+#forecastSection .hourlyForecastCard {
+    padding: 8px 16px;
+    gap: 12px;
+}
+
+#forecastSection .hourlyForecastCard > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
+#forecastSection .hourlyForecastCard > div p:first-child {
+    font-weight: 600;
+}
+
