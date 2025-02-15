@@ -207,7 +207,7 @@ async function handleFormSubmit(e) {
 async function fetchWeatherForecast() {
     const cityName = inputField.value;
     
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=2fd1c8de70a848dea29113517251002&q=${cityName}&days=3&aqi=no&alerts=no`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=2fd1c8de70a848dea29113517251002&q=${cityName}&days=3&aqi=no&alerts=no`;
 
     try {
         const response = await fetch(apiUrl);
